@@ -1,17 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(6, 6, 6);
+}
+
+img {
+  filter: drop-shadow(1px 1px 5px rgb(255, 255, 255)) invert(100%);
+}
+ 
  /* The animation code */
 @keyframes animatedSquare {
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
+  0%   {background-color: rgba(255, 0, 0, 1);
+        transform: rotate(0deg);
+        scale: 100%;}
+  20%  {background-color: rgba(255, 0, 180, 1);
+        transform: rotate(60deg);
+        scale: 120%;
+      }
+  40%  {background-color: rgba(0, 100, 200, 1);
+        transform: rotate(120deg);
+        scale: 150%;
+      }
+  60% {background-color: rgb(66, 238, 40);
+        transform: rotate(180deg);
+        scale: 150%;
+      }
+  80% {background-color: rgb(238, 232, 40);
+        transform: rotate(240deg);
+        scale: 120%;
+      }
+  100% {background-color: rgb(238, 103, 40);
+        transform: rotate(360deg);
+        scale: 100%;
+      }
+}
+
+div {
+  margin: auto;
+  margin-top: 15em;
 }
 
 /* The element to apply the animation to */
 div {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   background-color: red;
   animation-name: animatedSquare;
   animation-duration: 4s;
-  animation-iteration-count: infinite;    
+  animation-iteration-count: infinite;
+  filter: drop-shadow(2px 2px 40px rgb(93, 93, 93));    
 } 
